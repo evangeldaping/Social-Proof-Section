@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --spartan: "Spartan";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-family: var(--spartan), sans-serif;
+}
+
+body {
+    background: url(../images/bg-pattern-top-mobile.svg) bottom 0vh right 10vw,
+        url(../images/bg-pattern-bottom-mobile.svg) top 50vh left 0vw,
+        var(--white);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    max-height: 1700px;
+}
+
+.head,
+.middle {
+    text-align: center;
+}
+
+.head h1 {
+    color: var(--very-dark-magenta);
+    font-size: 30px;
+    font-weight: 900;
+    padding: 100px 50px 0px 50px;
+}
+
+.head p {
+    color: var(--dark-grayish-magenta);
+    font-size: 13px;
+    font-weight: bolder;
+    padding: 30px 50px 10px 50px;
+    line-height: 25px;
+    padding-bottom: 50px;
+}
+
+.middle {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.middle img {
+    padding: 0px 0 10px 3px;
+}
+
+.reviews,
+.reportGuru,
+.bestTech {
+    background: var(--light-grayish-magenta);
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+.middle p {
+    color: var(--very-dark-magenta);
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.card-group {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 40px;
+}
+
+.card-group h2 {
+    color: var(--soft-pink);
+}
+
+.card-top,
+.card-middle,
+.card-bottom {
+    background-color: var(--very-dark-magenta);
+    color: var(--light-grayish-magenta);
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.card-top img,
+.card-middle img,
+.card-bottom img {
+    border-radius: 100px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 45px;
+    height: 45px;
+}
+
+.card-top .card-profile,
+.card-middle .card-profile,
+.card-bottom .card-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-top .card-user,
+.card-middle .card-user,
+.card-bottom .card-user {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    line-height: 25px;
+}
+
+.card-top h1,
+h2,
+.card-middle h1,
+h2,
+.card-bottom h1,
+h2 {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.card-top p,
+.card-middle p,
+.card-bottom p {
+    align-self: flex-end;
+    line-height: 30px;
+    margin: 0 30px 30px 30px;
+    font-size: 11.5px;
+}
+
+/* tablet, landscape iPad, lo-res laptops and desktops */
+@media (min-width: 801px) {
+    body {
+        background: url(../images/bg-pattern-top-mobile.svg) bottom 0vh right
+                61vw,
+            url(../images/bg-pattern-bottom-mobile.svg) top 0vh left 0vw,
+            var(--white);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .topContent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .head h1 {
+        font-size: 45px;
+        max-width: 400px;
+    }
+
+    .head p {
+        max-width: 500px;
+        font-size: 15px;
+    }
+
+    .head,
+    .middle {
+        text-align: left;
+    }
+
+    .middle {
+        width: 100%;
+        align-self: center;
+        margin-right: 60px;
+        margin-top: 50px;
+    }
+
+    .middle p {
+        font-size: 15px;
+        margin-left: 50px;
+    }
+
+    .reviews,
+    .reportGuru,
+    .bestTech {
+        display: flex;
+    }
+
+    .reviews {
+        margin-right: 150px;
+    }
+
+    .reportGuru {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .bestTech {
+        margin-left: 150px;
+    }
+
+    .bottomContent {
+        margin: 50px;
+    }
+
+    .card-group {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 40px;
+        margin-left: 70px;
+        margin-right: 25px;
+    }
+
+    .card-group p {
+        font-size: 15px;
+    }
+
+    .card-top,
+    .card-middle,
+    .card-bottom {
+        margin-bottom: 0;
+        margin-left: 0;
+        flex: 0 0 33.333%;
+    }
+
+    .card-top {
+        margin-bottom: 50px;
+        margin-bottom: 40px;
+    }
+
+    .card-middle {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card-bottom {
+        margin-top: 40px;
+    }
+
+    .card-user h1,
+    h2 {
+        font-size: 15px;
+    }
+}
